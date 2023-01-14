@@ -30,4 +30,4 @@ deploy_local: package
 
 .PHONE: undeploy_local
 undeploy_local:
-	graphman --config "$(GRAPH_CONFIG)" drop --force pancakeswap_v3
+	graphman --config "$(GRAPH_CONFIG)" drop --force pcs
