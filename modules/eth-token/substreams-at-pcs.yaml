@@ -28,7 +28,7 @@ modules:
     kind: map
     initialBlock: 6810706
     inputs:
-      - source: sf.ethereum.type.v1.Block
+      - source: sf.ethereum.type.v2.Block
     output:
       type: proto:sf.ethereum.tokens.v1.Tokens
 
