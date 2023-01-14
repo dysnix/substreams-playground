@@ -3,7 +3,7 @@ GRAPH_CONFIG ?= ../graph-node-dev/config/graphman.toml
 
 .PHONY: build-and-pack-eth-token
 build-and-pack-eth-token:
-	cd ../eth-token && cargo build --target wasm32-unknown-unknown --release && substreams pack -o eth-token-at-pcs.spkg substreams.yaml
+	cd ../eth-token && cargo build --target wasm32-unknown-unknown --release && substreams pack -o eth-token-at-pcs.spkg substreams-at-pcs.yaml
 
 .PHONY: build
 build: build-and-pack-eth-token

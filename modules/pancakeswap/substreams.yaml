@@ -50,7 +50,6 @@ modules:
 
   - name: store_pairs
     kind: store
-    initialBlock: 6810706
     updatePolicy: set
     valueType: proto:pcs.types.v1.Pair
     inputs:
@@ -58,7 +57,6 @@ modules:
 
   - name: map_reserves
     kind: map
-    initialBlock: 6810706
     inputs:
       - source: sf.ethereum.type.v2.Block
       - store: store_pairs
@@ -68,7 +66,6 @@ modules:
 
   - name: store_reserves
     kind: store
-    initialBlock: 6810706
     updatePolicy: set
     valueType: string
     inputs:
@@ -78,7 +75,6 @@ modules:
 
   - name: store_prices
     kind: store
-    initialBlock: 6810706
     updatePolicy: set
     valueType: string
     inputs:
@@ -89,7 +85,6 @@ modules:
 
   - name: map_burn_swaps_events
     kind: map
-    initialBlock: 6810706
     inputs:
       - source: sf.ethereum.type.v2.Block
       - store: store_pairs
@@ -110,7 +105,6 @@ modules:
 
   - name: store_volumes
     kind: store
-    initialBlock: 6810706
     updatePolicy: add
     valueType: bigfloat
     inputs:
