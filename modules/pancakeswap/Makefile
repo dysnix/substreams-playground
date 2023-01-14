@@ -7,7 +7,7 @@ build:
 
 .PHONY: stream
 stream: build
-	substreams run -e $(ENDPOINT) substreams.yaml map_pairs -s 6810706 -t +10000
+	substreams run -e $(ENDPOINT) substreams.yaml map_pairs -s 6810706 -t +10000 --production-mode
 
 .PHONY: codegen
 codegen:
