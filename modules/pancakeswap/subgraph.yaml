@@ -10,7 +10,7 @@ dataSources:
     network: bsc
     source:
       package:
-        moduleName: graph_out
+        moduleName: db_out
         file: substreams.spkg
     mapping:
       kind: substreams/graph-entities
