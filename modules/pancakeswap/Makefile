@@ -24,7 +24,7 @@ package: build
 .PHONE: deploy_local
 deploy_local: package
 	mkdir build 2> /dev/null || true
-	graph build --ipfs http://localhost:5001 subgraph.yaml
+	graph build --ipfs https://api.thegraph.com/ipfs/ subgraph.yaml
 	graph create uniswap_v3 --node http://127.0.0.1:8020
 	graph deploy --node http://127.0.0.1:8020 --ipfs https://api.thegraph.com/ipfs/ --version-label v0.0.1 uniswap_v3 subgraph.yaml
 
