@@ -131,3 +131,13 @@ modules:
         mode: get
     output:
       type: proto:pcs.database.v1.DatabaseChanges
+
+  - name: graph_out
+      kind: map
+      initialBlock: 6810706
+      inputs:
+        - map: map_pairs
+        - map: map_reserves
+        - map: map_burn_swaps_events
+      output:
+        type: proto:substreams.entity.v1.EntityChanges
