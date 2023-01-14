@@ -44,6 +44,13 @@ pub fn map_pairs(blk: pb::eth::Block) -> Result<pcs::Pairs, Error> {
                 continue;
             }
 
+            log::info!("pair.address: {:#?}", address_pretty(&log.data[12..32]));
+            log::info!("token0_address: {:#?}", address_pretty(&log.topics[1][12..]));
+            log::info!("token1_address: {:#?}", address_pretty(&log.topics[2][12..]));
+            log::info!("creation_transaction_id: {:#?}", trx.hash);
+            log::info!("block_num: {:#?}", blk.number);
+            log::info!("log_ordinal: {:#?}", log.block_index as u64);
+
             pairs.pairs.push(pcs::Pair {
                 address: address_pretty(&log.data[12..32]),
                 token0_address: address_pretty(&log.topics[1][12..]),
