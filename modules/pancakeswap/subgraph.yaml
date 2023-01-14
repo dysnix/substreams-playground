@@ -7,7 +7,7 @@ schema:
 dataSources:
   - kind: substreams
     name: pcs
-    network: eth-mainnet
+    network: bsc
     source:
       package:
         moduleName: db_out
